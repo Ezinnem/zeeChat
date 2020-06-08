@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Zeechat App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class="fas fa-smile"></i> ZeeChat</h1>
+        <a href="index.html" class="btn"> Leave Room</a>
+        <a href="chat.html" class="btn"> Chat Room</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-messages">    
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    Friendie
+                 <video src="" id="rVideo" autoplay="autoplay">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    Me
+                 <video src="" id="lVideo" autoplay="autoplay" muted>
+                </div>
+            </div> 
+        </div>
+      </main>
+      <div class="chat-form-container">
+          <p>Your connection Id is: <span id="displayId"></span></p>
+        <form id="chat-form">
+            <input type="text" id="connId" class="form-control" placeholder="Enter a connection Id" required autofocus>
+          <button class="btn" type="submit" id="conn_button"><i class="fas fa-users"></i> Connect</button>
+          <button class="btn" type="submit" id="call_button"><i class="fas fa-paper-plane"></i> Call</button>
+
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min/js"></script>
+    <script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+    <script src="./js/video.js" async defer></script>
+  </body>
+</html>
