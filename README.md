@@ -3,4 +3,4 @@
 A web chat application implemented using WebRTC.
 
 
-Allows peer-to-peer video call.
+Allows peer-to-peer messaging and video call.
